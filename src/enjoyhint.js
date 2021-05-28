@@ -154,7 +154,7 @@
         var isHintInViewport = $(step_data.selector).get(0).getBoundingClientRect();
         if(isHintInViewport.top < 0 || isHintInViewport.bottom > (window.innerHeight || document.documentElement.clientHeight)){
             hideCurrentHint();
-            $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
+            $(document.body).scrollTop(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -200});
         }
         else {
           // if previous button has been clicked and element are in viewport to prevent custom step scrollAnimationSpeed set scrollSpeed to default
